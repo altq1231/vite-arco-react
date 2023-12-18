@@ -177,48 +177,21 @@ i {
 }
 
 .flex-row(@flex: flex, @Row: row, @wrap: nowrap) {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
   display: @flex;
-  -webkit-box-orient: horizontal;
-  //horizontal    vertical
-  -moz-box-direction: @Row;
-  -ms-flex-direction: @Row;
-  -webkit-flex-direction: @Row;
   flex-direction: @Row;
-  -webkit-box-wrap: @wrap;
-  -moz-box-wrap: @wrap;
-  -ms-flex-wrap: @wrap;
-  -webkit-flex-wrap: @wrap;
   flex-wrap: @wrap;
 }
 
 .flex-col(@flex: flex, @Col: column, @wrap: nowrap) {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
   display: @flex;
-  -webkit-box-orient: vertical;
-  -moz-box-direction: @Col;
-  -ms-flex-direction: @Col;
-  -webkit-flex-direction: @Col;
   flex-direction: @Col;
-  -webkit-box-wrap: @wrap;
-  -moz-box-wrap: @wrap;
-  -ms-flex-wrap: @wrap;
-  -webkit-flex-wrap: @wrap;
   flex-wrap: @wrap;
 }
 
 .fill-flex(@fill: 1) {
-  -webkit-box-flex: @fill;
-  -moz-box: @fill;
-  -webkit-flex: @fill;
-  -ms-flex: @fill;
   flex: @fill;
+}
+
+.flex-auto(@auto: auto) {
+  flex: @auto;
 }
