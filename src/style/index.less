@@ -1,0 +1,349 @@
+// @import './theme.less'; // 用于覆盖上面定义的变量
+@import './init.less'; // 用于覆盖上面定义的变量
+
+@font-face {
+  font-family: PuHuiRegular;
+  src: url('../assets/fonts/AlibabaPuHuiTi-2-55-Regular.otf');
+}
+
+@font-face {
+  font-family: PuHuiMedium;
+  src: url('../assets/fonts/AlibabaPuHuiTi-2-65-Medium.otf');
+}
+
+@font-face {
+  font-family: PuHuiSemiBold;
+  src: url('../assets/fonts/AlibabaPuHuiTi-2-75-SemiBold.otf');
+}
+
+html,
+body,
+#app,
+.app-vue {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: PuHuiRegular, Roboto Slab, sans-serif, Arial, Helvetica;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+#nprogress {
+  pointer-events: none;
+  z-index: 99999;
+
+  .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    height: 2px;
+    background-color: rgb(22, 93, 255);
+    opacity: 0.75;
+  }
+
+  .spinner-icon {
+    border-top-color: rgb(22, 93, 255);
+    border-left-color: rgb(22, 93, 255);
+  }
+}
+
+.nothing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+
+  .right-info {
+    flex: 0 0 17rem;
+    width: 17rem;
+    overflow: hidden;
+    margin-left: 2rem;
+
+    h1 {
+      font-size: 3rem;
+      color: #000000;
+      line-height: 3.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: rgba(#000000, 0.6);
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .back-btn {
+    margin-bottom: 2rem;
+  }
+
+  .bottom-back {
+    flex: 0 0 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.no-data-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+/*           默认宽度          */
+.common-width-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-wrapper {
+  width: 100%;
+  min-width: 1226px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+/* 可以设置不同的进入和离开动画   */
+/* 设置持续时间和动画函数        */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.weather-slide-enter-active,
+.weather-slide-leave-active {
+  transition: all 0.3s;
+}
+
+.weather-slide-enter-from {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.weather-slide-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.weather-slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.weather-slide-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.message-slide-enter-active,
+.message-slide-leave-active {
+  transition: all 0.3s;
+}
+
+.message-slide-leave-to,
+.message-slide-enter-from {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.message-slide-enter-to {
+  transition-delay: 0.1s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.message-slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.message-slide-enter-to.message-div {
+  transition-delay: 0.1s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.message-slide-leave-to.message-div,
+.message-slide-enter-from.message-div {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.records-slide-enter-active,
+.records-slide-leave-active {
+  transition: all 0.2s;
+}
+
+.records-slide-enter-from {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.records-slide-enter-to {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.records-slide-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.records-slide-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-top-enter-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-top-leave-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.fade-transform-enter-active,
+.fade-transform-leave-active {
+  transition: all 0.3s;
+}
+
+.fade-transform-enter-from {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.fade-transform-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-transform-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-transform-leave-to {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.list-enter-from {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+/*--------------------------- input --------------------------*/
+.input-group {
+  .input-item {
+    overflow: hidden;
+
+    .form-input.ant-input {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .code-btn.ant-btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 60px;
+    line-height: 50px;
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active,
+    &:disabled:focus {
+      color: #ffffff;
+      background-color: #6aadfd;
+      border-color: #6aadfd;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.input-item {
+  position: relative;
+
+  .form-input.ant-input {
+    height: 60px;
+    padding: 30px 20px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+
+    &:focus,
+    &:active,
+    &.has-value {
+      & + .input-label {
+        top: 6px;
+        font-size: 12px;
+        color: #aaa;
+      }
+    }
+  }
+
+  .input-label {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 20px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 20px;
+    transition: all 0.3s;
+    user-select: none;
+    cursor: text;
+    pointer-events: none;
+  }
+}
