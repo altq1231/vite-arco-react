@@ -127,32 +127,40 @@ i {
 
 /*---------------------------scrollbar--------------------------*/
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background: transparent;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(163, 169, 204, 0.8);
-  border-radius: 1px;
+  border-style: dashed;
+  border-color: transparent;
+  border-width: 2px;
+  background: rgba(184, 184, 184, 0.8);
+  background-clip: padding-box;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(169, 169, 169, 0.8);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(135, 135, 135, 0.8);
 }
 
 ::-webkit-scrollbar-thumb:decrement {
-  border-width: 3px;
+  border-width: 0;
   border-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb:increment {
-  border-width: 3px;
+  border-width: 0;
   border-color: transparent;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(163, 169, 204, 1);
-}
-
 ::-webkit-scrollbar-corner {
-  background-color: transparent;
+  background: transparent;
 }
 
 /*---------------------------layout--------------------------*/
