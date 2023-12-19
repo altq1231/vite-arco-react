@@ -4,9 +4,8 @@ import reactLogo from '@/assets/svg/react.svg';
 import viteLogo from '/vite.svg';
 import { Button } from '@arco-design/web-react';
 
-function App(props: any) {
+function App() {
   const [count, setCount] = useState(0);
-  console.log('props----------', props);
 
   return (
     <div className='app-page'>

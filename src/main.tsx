@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import '@arco-design/web-react/dist/css/arco.css';
 import App from './pages/App.tsx';
 import Login from './pages/login';
 import BaseLayout from './layout';
@@ -15,7 +16,6 @@ import rootReducer from './store';
 import zhCN from '@arco-design/web-react/es/locale/zh-CN';
 import enUS from '@arco-design/web-react/es/locale/en-US';
 import changeTheme from './utils/changeTheme';
-import '@arco-design/web-react/dist/css/arco.css';
 import '@/style/index.less';
 import './mock';
 
