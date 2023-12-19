@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import reactLogo from '@/assets/svg/react.svg';
 import viteLogo from '/vite.svg';
 import { Button } from '@arco-design/web-react';
 
-function App() {
+function App(props: any) {
   const [count, setCount] = useState(0);
+  console.log('props----------', props);
 
   return (
     <div className='app-page'>
@@ -18,7 +20,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className='card'>
-        <Button type='primary' onClick={() => setCount((count) => count + 1)}>count is {count}</Button>
+        <Button type='primary' onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
