@@ -37,11 +37,13 @@ function Index() {
   }
 
   // useEffect(() => {
-  //   if (checkLogin()) {
-  //     fetchUserInfo();
-  //   } else if (window.location.pathname.replace(/\//g, '') !== 'login') {
-  //     window.location.pathname = '/login';
-  //   }
+    // console.log('rootReducer------', store);
+
+    //   if (checkLogin()) {
+    //     fetchUserInfo();
+    //   } else if (window.location.pathname.replace(/\//g, '') !== 'login') {
+    //     window.location.pathname = '/login';
+    //   }
   // }, []);
 
   useEffect(() => {
