@@ -8,7 +8,7 @@ import BaseLayout from './layout';
 import Exception404 from './pages/exception/404';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { ConfigProvider } from '@arco-design/web-react';
+import { Button, ConfigProvider } from '@arco-design/web-react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalContext } from './context';
 import useStorage from './utils/useStorage';
@@ -37,13 +37,13 @@ function Index() {
   }
 
   // useEffect(() => {
-    // console.log('rootReducer------', store);
+  // console.log('rootReducer------', store);
 
-    //   if (checkLogin()) {
-    //     fetchUserInfo();
-    //   } else if (window.location.pathname.replace(/\//g, '') !== 'login') {
-    //     window.location.pathname = '/login';
-    //   }
+  //   if (checkLogin()) {
+  //     fetchUserInfo();
+  //   } else if (window.location.pathname.replace(/\//g, '') !== 'login') {
+  //     window.location.pathname = '/login';
+  //   }
   // }, []);
 
   useEffect(() => {
@@ -55,6 +55,11 @@ function Index() {
     setLang,
     theme,
     setTheme
+  };
+
+  const changeMode = () => {
+    console.log('changeMode');
+    setTheme(theme === 'light' ? 'dark' : 'light')
   };
 
   return (
@@ -72,6 +77,9 @@ function Index() {
             border: false
           }
         }}>
+        <Button type='primary' onClick={changeMode}>
+          换肤
+        </Button>
         <Provider store={store}>
           <GlobalContext.Provider value={contextValue}>
             <Routes>
